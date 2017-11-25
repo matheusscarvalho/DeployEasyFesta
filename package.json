@@ -9,9 +9,9 @@
         "lint": "ng lint",
         "e2e": "ng e2e",
   "heroku-prebuild": "npm install -g http-server",
-        "heroku-postbuild": "ng build --prod && node ./server/app.js",
+        "heroku-postbuild": "ng build --prod",
   "start": "node ./server/app.js",
- "deploy": "git push origin master && git push heroku master"
+ "deploy": "node ./server/app.js"
     },
     "private": true,
     "dependencies": {

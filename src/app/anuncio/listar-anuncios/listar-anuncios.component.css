@@ -1,0 +1,15 @@
+.anuncios-container {
+    padding: 20px 0 20px 0;
+}
+
+.anuncios-container .col-md-4 {
+    display: inline-block;
+}
+
+.card-header {
+    background-image: url("https://www.casasofia.com.br/cdn/imagens/produtos/original/tecido-decoracao-acores-dohler-22052799d585cb03b93b28e1ff6d4d58.jpg");
+}
+
+.rate {
+    color: #BDBD14;
+}

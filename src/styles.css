@@ -1,0 +1,79 @@
+.bold {
+    font-weight: bold;
+}
+
+.painel {
+    border: solid;
+    border-width: 1px;
+    border-radius: 4px;
+    padding: 10px;
+    border-color: plum;
+}
+
+.margin-top-10 {
+    margin-top: 10px;
+}
+
+.yellow {
+    color: yellow;
+}
+
+.font-size-20 {
+    font-size: 20px;
+}
+
+.font-size-14 {
+    font-size: 14px;
+}
+
+.font-align-center {
+    text-align: center;
+}
+
+.page-tittle {
+    background: purple;
+    color: #FFF;
+    padding-left: 10px;
+    font-weight: 600;
+    border: 2px solid white;
+    -webkit-box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.24);
+    -moz-box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.24);
+    box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.24);
+    padding: 10px;
+    font-size: 20px;
+}
+
+.page-tittle-small {
+    background: purple;
+    color: #FFF;
+    font-size: 16px;
+    padding-left: 10px;
+    font-weight: 600;
+    border: 2px solid white;
+    -webkit-box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.24);
+    -moz-box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.24);
+    box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.24);
+    padding: 10px;
+}
+
+.page-footer {
+    background: lightblue;
+    border-radius: 4px;
+    padding: 10px;
+}
+
+.ng-valid[required],
+.ng-valid.required {
+    border-left: 5px solid #42A948;
+    /* green */
+}
+
+.ng-invalid:not(form) {
+    border-left: 5px solid #a94442;
+    /* red */
+}
+
+input:disabled,
+button:disabled {
+    cursor: not-allowed;
+}

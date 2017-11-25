@@ -1,0 +1,101 @@
+<div class="container box-login">
+
+    <div class="row main">
+
+        <div class="col-sm-6 text-center left-side">
+            <img width="150px" class="text-center fundo-branco" height="100px" src="assets/logo/logo4.png">
+
+            <p>
+            </p>
+
+            <p>
+            </p>
+            <p>
+            </p>
+            <p>
+            </p>
+            <p>
+            </p>
+            <p>
+            </p>
+
+            <p class="purple">Nunca foi tão fácil e rápido organizar seu evento.</p>
+            <button routerLink="/conta/cadastrar" class="btn btn-lg btn-deep-purple">Cadastre-se já</button>
+
+        </div>
+
+        <div class="col-sm-6 right-side">
+            <div class="text-center btn-deep-purple title-login">
+
+                <fa name="sign-in"></fa> Login
+
+            </div>
+
+
+            <!--Form with header-->
+            <form #loginForm="ngForm" class="form">
+
+                <div class="text-xs-center" *ngIf="!getUsuario()">
+                    <button class="btn btn-lg btn-block btn-deep-purple-inverse" (click)="instanciarConsumidor()">
+                        <fa name="shopping-bag"></fa>
+                        Consumidor
+                    </button>
+                </div>
+
+                <div class="text-xs-center" *ngIf="!getUsuario()">
+                    <button class="btn btn-lg margin-top-10 btn-block btn-deep-purple-inverse" (click)="instanciarFornecedor()">
+                            <fa name="truck"></fa>
+                            Fornecedor
+                        </button>
+                </div>
+
+                <div *ngIf="getUsuario()" class="alert alert-info btn-block">
+                    <fa name="truck" *ngIf="getUsuario().constructor.name == 'Fornecedor'"></fa>
+                    <fa name="shopping-bag" *ngIf="getUsuario().constructor.name == 'Consumidor'"></fa>
+                    {{getUsuario().constructor.name}}
+                    <fa name="window-close" class="pull-right text-danger" (click)="resetarPerfil();"></fa>
+
+                </div>
+
+                <div *ngIf="getStausLogin() && getUsuario()" class="alert alert-danger btn-block">
+                    <fa name="exclamation-circle"></fa>
+                    Usuário ou senha incorretos.
+                </div>
+
+
+                <div class="form-group" *ngIf="getUsuario()">
+                    <input [(ngModel)]="getUsuario().email" type="text" name="email" class="form-control" placeholder="E-mail" required>
+
+                </div>
+                <br *ngIf="getUsuario()">
+
+                <div class="form-group" *ngIf="getUsuario()">
+                    <input [(ngModel)]="getUsuario().senha" type="password" name="senha" class="form-control" placeholder="Senha" required>
+
+                </div>
+                <br *ngIf="getUsuario()">
+
+                <div class="text-xs-center" *ngIf="getUsuario()">
+                    <button (click)="fazerLogin()" class="btn btn-block btn-deep-purple" [disabled]="!loginForm.form.valid">
+                        <fa name="send"></fa>
+                        Entrar
+                    </button>
+                </div>
+                <br>
+
+                <div class="font-14 text-center">Não tem uma conta? <br>
+                    <a routerLink="/conta/cadastrar">Crie uma em menos de um minuto!</a>
+                </div>
+
+            </form>
+            <!--/Form with header-->
+
+        </div>
+        <!--col-sm-6-->
+
+
+    </div>
+    <!--col-sm-8-->
+
+</div>
+<!--container-->

@@ -1,0 +1,20 @@
+.painel-profile {
+    border: 1px solid plum;
+    border-radius: 4px;
+    padding: 10px 30px 30px 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.sublinhado-roxo {
+    background: purple;
+    color: #FFF;
+    font-size: 16px;
+    padding-left: 10px;
+    font-weight: 600;
+    margin-top: 10px;
+    border: 2px solid white;
+    -webkit-box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.24);
+    -moz-box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.24);
+    box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.24);
+}

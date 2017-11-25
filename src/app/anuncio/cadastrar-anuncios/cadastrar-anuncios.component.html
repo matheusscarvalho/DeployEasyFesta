@@ -1,0 +1,95 @@
+<div class="page-tittle">
+    <fa name="plus-circle"></fa>
+    Cadastrar Anúncio
+</div>
+
+<fieldset class="painel margin-top-10">
+    <form #anuncioForm="ngForm">
+        <div class="row">
+            <div class="form-group col-md-4">
+                <label class="control-label bold" for="Título">Título</label>
+                <div>
+                    <input id="Título" [(ngModel)]="anuncio.titulo" name="Título" type="text" placeholder="Ex.: Filmagem" class="form-control input-md" required="">
+
+                </div>
+            </div>
+
+            <div class="form-group col-md-3">
+                <label class="control-label bold" for="segmento">Segmento</label>
+                <select class="form-control input-md" required [(ngModel)]="anuncio.segmento" name="segmento">
+                          <option value="">Selecione</option>
+                          <option value="1">Aniversário</option>
+                          <option value="2">Casamento</option>
+                          <option value="3">Corporativo</option>                        
+                          <option value="4">Debutante</option>
+                          <option value="5">Formatura</option>  
+                          <option value="6">Múltiplos</option>  
+                      </select>
+            </div>
+
+
+            <!-- Multiple Radios (inline) -->
+            <div class="form-group col-md-2">
+                <label class="control-label bold" for="categoria">Tipo</label>
+                <br>
+                <input type="radio" name="tipo" [(ngModel)]="anuncio.tipo" btnRadio=1 [checked]="anuncio.tipo == 1">Produto &nbsp;&nbsp;
+                <input type="radio" name="tipo" [(ngModel)]="anuncio.tipo" btnRadio=2 [checked]="anuncio.tipo == 2">Serviço &nbsp;&nbsp;
+            </div>
+
+            <!-- Multiple Radios (inline) -->
+            <div class="form-group col-md-2">
+                <label class="control-label bold" for="publicado">Publicado</label>
+                <br>
+                <input type="radio" name="publicado" [(ngModel)]="anuncio.publicado" btnRadio=true [checked]="anuncio.publicado == true">Sim &nbsp;&nbsp;
+                <input type="radio" name="publicado" [(ngModel)]="anuncio.publicado" btnRadio=false [checked]="anuncio.publicado == false">Não
+            </div>
+
+            <!-- Textarea -->
+            <div class="form-group col-md-12">
+                <label class="control-label bold" for="descricao">Descrição</label>
+                <div>
+                    <textarea [(ngModel)]="anuncio.descricao" class="form-control" rows="5" id="descricao" name="descricao" required></textarea>
+                </div>
+            </div>
+        </div>
+    </form>
+</fieldset>
+
+<div class="row margin-top-10">
+    <!-- Button (Double) -->
+    <div class="form-group col-md-6">
+        <button id="voltar" name="voltar" class="btn btn-block btn-warning" routerLink="/anuncio/listar">
+            <fa name="reply"></fa>Voltar
+        </button>
+    </div>
+    <div class="form-group col-md-6">
+        <button id="salvar" name="salvar" class="btn btn-block btn-primary" (click)="salvarAnuncio();staticModal.show()" [disabled]="!anuncioForm.form.valid">
+            <fa name="floppy-o"></fa>Salvar
+        </button>
+    </div>
+</div>
+
+<div class="modal fade" bsModal #staticModal="bs-modal" [config]="{backdrop: 'static'}" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title pull-left">
+                    <fa name="floppy-o"></fa> Salvar
+                </h5>
+                <button type="button" class="close pull-right" aria-label="Close" (click)="staticModal.hide()">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+            </div>
+            <div class="modal-body">
+                <div [ngClass]="{'alert': true, 'alert-success': !mensagem.erro, 'alert-danger': mensagem.erro}" role="alert">
+                    <span>{{mensagem.texto}}</span>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" routerLink="/anuncio/listar">
+                        Ok
+                    </button>
+            </div>
+        </div>
+    </div>
+</div>

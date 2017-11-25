@@ -1,0 +1,23 @@
+<ul class="top-nav">
+    <li>
+        <a routerLinkActive="active">
+            <img class="fundo-branco" width="100px" height="25px" src="assets/logo/logo2.png">
+        </a>
+    </li>
+
+
+    <div class="pull-right">
+        <li>
+            <a routerLink="/conta" routerLinkActive="active">
+                <fa name="user"></fa>Perfil
+            </a>
+        </li>
+
+        <li>
+            <a routerLink="/login" (click)="fazerLogout()">
+                <fa name="sign-out"></fa>Sair
+            </a>
+        </li>
+
+    </div>
+</ul>

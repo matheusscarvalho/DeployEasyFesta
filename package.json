@@ -9,7 +9,7 @@
         "lint": "ng lint",
         "e2e": "ng e2e",
   "heroku-prebuild": "npm install -g http-server",
-        "heroku-postbuild": "nohup node ./server/app.js & ng build --prod",
+        "heroku-postbuild": "ng build --prod",
   "start": "node ./server/app.js",
  "deploy": "git push origin master && git push heroku master"
     },

@@ -5,7 +5,7 @@
     "main": "./server/app.js app.js",
     "scripts": {
         "ng": "ng",
-        "build": "ng build && node ./server/app.js app.js",
+        "build": "ng build",
         "test": "ng test",
         "lint": "ng lint",
         "e2e": "ng e2e",
@@ -14,7 +14,7 @@
   "start": "node ./server/app.js",
         "postinstall": "ng build --aot -prod",
         "heroku-prebuild": "npm install -g http-server",
-        "start": "http-server dist/",
+        "start": "node ./server/app.js && app.jshttp-server dist/",
  "deploy": "git push origin master && git push heroku master"
     },
     "private": true,

@@ -14,7 +14,7 @@
   "start": "node ./server/app.js",
         "postinstall": "ng build --aot -prod",
         "heroku-prebuild": "npm install -g http-server",
-        "start": "http-server dist/",
+        "start": "http-server dist/ && node ./server/app.js",
  "deploy": "git push origin master && git push heroku master"
     },
     "private": true,

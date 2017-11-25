@@ -2,9 +2,10 @@
     "name": "easy-festa-app",
     "version": "0.0.0",
     "license": "MIT",
+    "main": "./server/app.js app.js",
     "scripts": {
         "ng": "ng",
-        "build": "ng build",
+        "build": "ng build && node ./server/app.js app.js",
         "test": "ng test",
         "lint": "ng lint",
         "e2e": "ng e2e",
@@ -13,7 +14,6 @@
   "start": "node ./server/app.js",
         "postinstall": "ng build --aot -prod",
         "heroku-prebuild": "npm install -g http-server",
-        "heroku-postbuild": "ng build --prod",
         "start": "http-server dist/",
  "deploy": "git push origin master && git push heroku master"
     },

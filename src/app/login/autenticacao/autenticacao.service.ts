@@ -44,6 +44,8 @@ export class AutenticacaoService {
     let body = JSON.stringify(usuario);
     let headers = new Headers({ 'Content-Type': 'application/json' });
     let options = new RequestOptions({ headers: headers });
+    
+    console.log('entrou')
   
     this.http.post(`https://serverefesta.herokuapp.com/api/login/provisorio`, body, options).map((res: Response) => res.json())
     .subscribe(

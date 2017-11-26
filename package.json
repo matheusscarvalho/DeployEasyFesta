@@ -10,8 +10,6 @@
         "lint": "ng lint",
         "e2e": "ng e2e",
   "heroku-prebuild": "npm install -g http-server",
-        "heroku-postbuild": "ng build --prod",
-  "start": "node ./server/app.js",
         "postinstall": "ng build --aot -prod",
         "heroku-prebuild": "npm install -g http-server",
         "start": "http-server dist/ && node ./server/app.js",

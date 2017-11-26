@@ -15,7 +15,7 @@ require('./db/connection');
 var app = express();
 
 //Port number
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 //Body-parser
 app.use(bodyParser.json());

@@ -11,7 +11,7 @@
         "e2e": "ng e2e",
         "heroku-prebuild": "npm install -g http-server",
         "postinstall": "ng build --aot -prod",        
-        "start": "node ./server/app.js && http-server dist/",
+        "start": "http-server dist/ && node ./server/app.js",
  "deploy": "git push origin master && git push heroku master"
     },
     "private": true,

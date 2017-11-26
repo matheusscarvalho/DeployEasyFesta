@@ -1,1 +1,1 @@
-web: http-server dist/ && node ./server/app.js
+worker: node ./server/app.js

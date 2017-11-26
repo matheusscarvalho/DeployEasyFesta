@@ -1,1 +1,1 @@
-web: http-server dist/ && node ./server/app.js
+web: node ./server/app.js
